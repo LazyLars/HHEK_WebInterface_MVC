@@ -1,0 +1,17 @@
+﻿@model Webinterface_MVC.Controllers.JsonString
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <form asp-controller="Home" asp-action="Post">
+        <textarea asp-for="@Model.Content" class="col-md-10" style="min-height:350px">
+        </textarea>
+        <button name="get" asp-action="Get" class="col-md-2 btn btn-info">HASHTAGS HOLEN</button>
+        <button name="delete" asp-action="Delete" class="col-md-2 btn-danger">LÖSCHEN</button>
+        <button name="post" type="submit" class="col-md-12 btn btn-primary">ABSENDEN</button>
+    </form>
+</div>
+<div class="row">
+    <h2>@ViewBag.Result</h2>
+</div>
